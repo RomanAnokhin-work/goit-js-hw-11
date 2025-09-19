@@ -5,7 +5,7 @@ import{a as m,i as g,S as p}from"./assets/vendor-DzBlEn4a.js";(function(){const 
       src="${i}"
       alt="${r}"
       width="360"
-      height="200"
+      height="152"
     />
     <div class="gallery-info">
       <p class="gallery-stats">
