@@ -23,7 +23,7 @@ export function createGallery(images) {
       src="${largeImageURL}"
       alt="${tags}"
       width="360"
-      height="200"
+      height="152"
     />
     <div class="gallery-info">
       <p class="gallery-stats">
@@ -51,8 +51,8 @@ export function clearGallery() {
   gallery.innerHTML = '';
 }
 export function showLoader() {
-    loader.classList.remove('hidden');
+  loader.classList.remove('hidden');
 }
 export function hideLoader() {
-    loader.classList.add('hidden');
+  loader.classList.add('hidden');
 }
