@@ -17,10 +17,8 @@ export function getImagesByQuery(query) {
     .then(response => {
       if (response.data.hits.length === 0) {
         throw new Error();
-      }
-
-      console.log(response.data);
-
+        }
+        
       return response.data;
     })
 
