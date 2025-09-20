@@ -18,6 +18,7 @@ function hendlerSubmit(event) {
   const inputValue = event.target.elements.search.value.toLowerCase().trim();
 
   if (!inputValue) {
+    showWarning();
     return;
   }
 
@@ -45,4 +46,14 @@ function showQueryError(message) {
     timeout: 3000,
     close: true,
   });
+}
+
+function showWarning() { 
+  iziToast.warning({
+    title: 'Caution',
+    message: 'Please enter a search query',
+    position: 'topRight',
+    timeout: 3000,
+    close: true,
+});
 }
