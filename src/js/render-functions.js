@@ -22,16 +22,24 @@ export function createGallery(images) {
       class="gallery-image"
       src="${largeImageURL}"
       alt="${tags}"
-      width="360"
-      height="152"
     />
     <div class="gallery-info">
-      <p class="gallery-stats">
-        <span class="gallery-likes">Likes: ${likes}</span>
-        <span class="gallery-views">Views: ${views}</span>
-        <span class="gallery-comments">Comments: ${comments}</span>
-        <span class="gallery-downloads">Downloads: ${downloads}</span>
-      </p>
+      <div class="gallery-stats"> 
+        <span class="gallery-stat-label">Likes</span>
+        <span class="gallery-stat-value">${likes}</span>
+      </div>
+      <div class="gallery-stats"> 
+        <span class="gallery-stat-label">Views</span>
+        <span class="gallery-stat-value">${views}</span>
+      </div>
+      <div class="gallery-stats"> 
+        <span class="gallery-stat-label">Comments</span>
+        <span class="gallery-stat-value">${comments}</span>
+      </div>
+      <div class="gallery-stats">
+        <span class="gallery-stat-label">Downloads</span>
+        <span class="gallery-stat-value">${downloads}</span> 
+      </div>
     </div>
   </a>
 </li>`
