@@ -14,7 +14,9 @@ export function getImagesByQuery(query) {
     })
     .then(response => {
       if (response.data.hits.length === 0) {
-        throw new Error('Sorry, there are no images matching your search query. Please try again!');
+        throw new Error(
+          'Sorry, there are no images matching your search query. Please try again!'
+        );
       }
 
       return response.data;

@@ -3,6 +3,10 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 export function createGallery(images) {
   const markup = images
@@ -17,10 +21,10 @@ export function createGallery(images) {
         downloads,
       }) =>
         `<li class="gallery-item">
-  <a class="gallery-link" href=${webformatURL}>
+  <a class="gallery-link" href=${largeImageURL}>
     <img
       class="gallery-image"
-      src="${largeImageURL}"
+      src="${webformatURL}"
       alt="${tags}"
     />
     <div class="gallery-info">
@@ -47,11 +51,6 @@ export function createGallery(images) {
     .join('');
 
   gallery.innerHTML = markup;
-
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
 
   lightbox.refresh();
 }
